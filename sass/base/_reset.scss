@@ -13,6 +13,7 @@
     src: url(../../assets/fonts/Poppins-SemiBold.ttf);
 }
 
+
 :root {
     --primary-color: #263238;
     --secondary-color: #8F95A5;
@@ -46,6 +47,10 @@ a {
     cursor: pointer;
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 button {
@@ -89,6 +94,14 @@ li {
     color: #fff;
     background-color: var(--primary-color);
     border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    transition: .2s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+    }
 }
 
 .btn {
@@ -99,6 +112,20 @@ li {
     color: #fff;
     background-color: var(--primary-color);
     border-radius: 5px;
+    transition: .2s ease-in-out;
+    border: 2px solid transparent;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+    }
+
+    &:active {
+        transition: .1s ease-in-out;
+        color: var(--secondary-color);
+        border: 2px solid var(--secondary-color);
+    }
 }
 
 .desc_big {
