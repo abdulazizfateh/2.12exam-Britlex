@@ -222,12 +222,12 @@ li {
   justify-content: space-between;
 }
 
-.header_nav_logo {
+.header_nav_logo, .logo {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.header_nav_logo img {
+.header_nav_logo img, .logo img {
   width: 71px;
 }
 
@@ -252,7 +252,7 @@ li {
   .header_nav {
     height: 90px;
   }
-  .header_nav_logo img {
+  .header_nav_logo img, .logo img {
     width: 89px;
   }
   .header_nav_menu img {
@@ -268,7 +268,7 @@ li {
   .header_nav {
     position: relative;
   }
-  .header_nav_logo img {
+  .header_nav_logo img, .logo img {
     width: 71px;
   }
   .header_nav_list {
@@ -306,7 +306,7 @@ li {
   .header_nav {
     height: 120px;
   }
-  .header_nav_logo img {
+  .header_nav_logo img, .logo img {
     width: 106px;
   }
   .header_nav_list {
@@ -764,12 +764,7 @@ li {
     justify-content: space-between;
   }
 }
-.section_pricing {
-  background-color: hotpink;
-}
-
 .pricing_wrapper {
-  background-color: pink;
   margin-bottom: 100px;
 }
 
@@ -782,7 +777,6 @@ li {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: 63px;
-  background-color: rgb(134, 255, 209);
 }
 
 .pricing_card {
@@ -792,17 +786,14 @@ li {
   flex-direction: column;
   gap: 28px;
   justify-content: start;
-  background-color: chartreuse;
 }
 
 .pricing_card_image {
-  background-color: rgb(233, 255, 211);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .pricing_card_image img {
-  background-color: red;
   width: 90%;
 }
 
@@ -812,7 +803,7 @@ li {
 }
 
 .pricing_card_body_desc {
-  margin-bottom: 33px;
+  margin-bottom: 4px;
   text-align: center;
 }
 
@@ -869,7 +860,7 @@ li {
   .pricing_card_body_desc {
     width: 80%;
     margin: 0 auto;
-    margin-bottom: 26.91px;
+    margin-bottom: 0;
   }
   .pricing_card_body_price_wrapper {
     display: flex;
@@ -890,6 +881,14 @@ li {
     line-height: 24px;
   }
 }
+@media (min-width: 600px) {
+  .pricing_cards {
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 35px;
+         column-gap: 35px;
+  }
+}
 @media (min-width: 768px) {
   .pricing_wrapper {
     margin-bottom: 95px;
@@ -900,34 +899,329 @@ li {
   .pricing_cards {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 0;
-    -moz-column-gap: 35px;
-         column-gap: 35px;
   }
   .pricing_card {
     width: 100%;
-    max-width: auto;
     gap: 23px;
   }
-  .pricing_card_image {
-    margin: 0 auto;
-    width: 100%;
-  }
   .pricing_card_image img {
-    width: 200px;
-    height: 200px;
     width: 100%;
+    height: 220px;
   }
   .pricing_card_body {
-    flex: 1;
     display: flex;
     flex-direction: column;
   }
   .pricing_card_body_title {
     margin-bottom: 15px;
+    text-align: start;
   }
   .pricing_card_body_desc {
     width: 100%;
     margin: 0;
-    margin-bottom: 23px;
+    text-align: start;
+  }
+  .pricing_card_body_price_wrapper {
+    flex: 1;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+@media (min-width: 992px) {
+  .pricing_wrapper {
+    margin-bottom: 160px;
+  }
+  .pricing_title {
+    margin-bottom: 50px;
+  }
+  .pricing_cards {
+    -moz-column-gap: 55px;
+         column-gap: 55px;
+  }
+  .pricing_card_image {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .pricing_card_image img {
+    width: 100%;
+    height: 242px;
+  }
+  .pricing_card_body_price {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .pricing_wrapper {
+    margin-bottom: 300px;
+  }
+  .pricing_title {
+    margin-bottom: 80px;
+  }
+  .pricing_cards {
+    width: 100%;
+    -moz-column-gap: 52px;
+         column-gap: 52px;
+  }
+  .pricing_card {
+    gap: 30px;
+  }
+  .pricing_card_image img {
+    max-width: 311px;
+    height: 340px;
+  }
+  .pricing_card:nth-child(2) .pricing_card_image img {
+    max-width: 391px;
+  }
+  .pricing_card:nth-child(3) .pricing_card_image img {
+    max-width: 340px;
+  }
+  .pricing_card_body_title {
+    margin-bottom: 19px;
+  }
+  .pricing_card_body_price_btn {
+    padding: 0 24px;
+    gap: 14px;
+  }
+  .pricing_card_body_price {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+.contact_wrapper {
+  padding-bottom: 57px;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.contact_title {
+  text-align: center;
+  margin-bottom: 53px;
+}
+
+.contact_image {
+  max-width: 358px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 38px;
+}
+
+.content_title {
+  display: none;
+}
+
+.contact_desc {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 31px;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 17px;
+}
+
+.contact_form_input {
+  width: 100%;
+  min-height: 50px;
+  outline: none;
+  text-indent: 26px;
+  border: 1px solid #8F95A5;
+  border-radius: 5px;
+  color: var(--third-color);
+  font-size: 12px;
+  line-height: 18px;
+}
+.contact_form_input ::-moz-placeholder {
+  color: #8F95A5;
+}
+.contact_form_input ::placeholder {
+  color: #8F95A5;
+}
+
+.contact_form_btn {
+  width: 100%;
+  min-height: 60px;
+}
+
+@media (min-width: 480px) {
+  .contact_desc {
+    width: 84%;
+  }
+}
+@media (min-width: 575px) {
+  .contact_wrapper {
+    padding-bottom: 143px;
+  }
+  .contact_title {
+    margin-bottom: 100px;
+  }
+  .contact_image {
+    margin-bottom: 33px;
+  }
+  .content_title {
+    display: none;
+  }
+  .contact_desc {
+    margin-bottom: 59px;
+  }
+  .contact_form {
+    max-width: 550px;
+    height: 61px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #8F95A5;
+    gap: 6px;
+  }
+  .contact_form_input {
+    flex: 1;
+    width: auto;
+    min-height: auto;
+    text-indent: 25px;
+    border: none;
+    font-size: 13px;
+    line-height: 19.5px;
+  }
+  .contact_form_btn {
+    width: auto;
+    min-height: auto;
+    padding: 0 56px;
+  }
+}
+@media (min-width: 768px) {
+  .contact_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+  }
+  .contact_image {
+    max-width: 358px;
+    margin-bottom: 0;
+  }
+  .contact_title {
+    display: none;
+    margin-bottom: 35px;
+  }
+  .contact_form {
+    margin: 0;
+    border: none;
+  }
+  .contact_form_input {
+    border: 1px solid #8F95A5;
+  }
+  .contact_desc {
+    width: 80%;
+    text-align: start;
+    margin: 0;
+    margin-bottom: 26px;
+  }
+  .content_title {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .contact_wrapper {
+    padding-bottom: 157px;
+  }
+  .contact_wrapper {
+    gap: 108px;
+  }
+  .contact_form_input {
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .contact_form_btn {
+    border-radius: 10px;
+  }
+}
+@media (min-width: 1280px) {
+  .contact_wrapper {
+    padding-bottom: 157px;
+  }
+  .contact_wrapper {
+    gap: 108px;
+  }
+  .contact_image {
+    max-width: 477px;
+  }
+  .contact_image img {
+    width: 100%;
+    height: 100%;
+  }
+  .contact_content {
+    flex: 1;
+  }
+  .contact_title {
+    margin-bottom: 48px;
+  }
+  .contact_desc {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 48px;
+  }
+  .contact_form {
+    max-width: 726px;
+    min-height: 80px;
+    gap: 12px;
+  }
+  .contact_form_input {
+    text-indent: 33px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.footer_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 44px;
+  padding-bottom: 46px;
+}
+
+.footer_logo {
+  margin-bottom: 33px;
+}
+
+.footer_desc {
+  font-family: P5;
+  font-size: 11px;
+  line-height: 16.5px;
+  color: #8F95A5;
+  text-align: center;
+}
+
+@media (min-width: 575px) {
+  .footer_wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 41px;
+  }
+  .footer_logo {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .footer_wrapper {
+    padding-top: 23px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .footer_wrapper {
+    padding-top: 30px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer_wrapper {
+    padding-top: 35px;
+    padding-bottom: 70px;
   }
 }
