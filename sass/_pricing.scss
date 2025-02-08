@@ -136,14 +136,6 @@
     }
 }
 
-@media (min-width: 600px) {
-    .pricing_cards {
-        place-content: center;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 35px;
-    }
-}
-
 @media (min-width: 768px) {
     .section_pricing {}
 
@@ -158,6 +150,7 @@
     .pricing_cards {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 0;
+        column-gap: 35px;
     }
 
     .pricing_card {

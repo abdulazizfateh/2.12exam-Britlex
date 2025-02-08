@@ -22,6 +22,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: P4;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -334,6 +335,10 @@ li {
   max-width: 424px;
 }
 
+.hero_title_lamp img {
+  display: none;
+}
+
 .hero_title {
   text-align: center;
   margin-bottom: 20px;
@@ -399,6 +404,16 @@ li {
     order: 1;
     width: 50%;
   }
+  .hero_title_lamp {
+    position: relative;
+  }
+  .hero_title_lamp img {
+    display: flex;
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    width: 54px;
+  }
   .hero_title {
     width: 70%;
     text-align: start;
@@ -425,6 +440,9 @@ li {
   .hero_get_start_btn {
     padding: 0 78px;
     min-height: 80px;
+  }
+  .hero_title_lamp img {
+    width: 85.24px;
   }
 }
 @media (min-width: 1280px) {
@@ -881,14 +899,6 @@ li {
     line-height: 24px;
   }
 }
-@media (min-width: 600px) {
-  .pricing_cards {
-    place-content: center;
-    grid-template-columns: repeat(2, 1fr);
-    -moz-column-gap: 35px;
-         column-gap: 35px;
-  }
-}
 @media (min-width: 768px) {
   .pricing_wrapper {
     margin-bottom: 95px;
@@ -899,6 +909,8 @@ li {
   .pricing_cards {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 0;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
   }
   .pricing_card {
     width: 100%;

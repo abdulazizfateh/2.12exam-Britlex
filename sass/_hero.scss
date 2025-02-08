@@ -18,6 +18,12 @@
 
 .hero_content {}
 
+.hero_title_lamp {
+    img {
+        display: none;
+    }
+}
+
 .hero_title {
     text-align: center;
     margin-bottom: 20px;
@@ -96,6 +102,18 @@
         width: 50%;
     }
 
+    .hero_title_lamp {
+        position: relative;
+
+        img {
+            display: flex;
+            position: absolute;
+            top: 40%;
+            right: 20%;
+            width: 54px;
+        }
+    }
+
     .hero_title {
         width: 70%;
         text-align: start;
@@ -127,6 +145,12 @@
     .hero_get_start_btn {
         padding: 0 78px;
         min-height: 80px;
+    }
+
+    .hero_title_lamp {
+        img {
+            width: 85.24px;
+        }
     }
 }
 
