@@ -1,0 +1,140 @@
+.site_header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+}
+
+.header_nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_nav_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 71px;
+    }
+}
+
+.header_nav_list {
+    display: none;
+}
+
+.header_nav_item {}
+
+.header_nav_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 33.53px;
+    }
+}
+
+.header_nav_btn {
+    display: none;
+}
+
+
+@media (min-width: 575px) {
+    .header_nav {
+        height: 90px;
+    }
+
+    .header_nav_logo {
+        img {
+            width: 89px;
+        }
+    }
+
+    .header_nav_menu {
+        img {
+            width: 43.35px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header_nav_menu {
+        img {
+            width: 30px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .header_nav {
+        position: relative;
+    }
+
+    .header_nav_logo {
+        img {
+            width: 71px;
+        }
+    }
+
+    .header_nav_list {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .header_nav_item {
+        span {
+            color: var(--primary-color);
+        }
+    }
+
+    .header_nav_menu {
+        display: none;
+    }
+
+    .header_nav_btn {
+        display: flex;
+        min-height: 50px;
+        padding: 0 40px;
+        border: 2px solid var(--primary-color);
+        border-radius: 5px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: P4;
+        font-size: 18px;
+        line-height: 27px;
+        color: var(--third-color);
+    }
+}
+
+@media (min-width: 1280px) {
+    .header_nav {
+        height: 120px;
+    }
+
+    .header_nav_logo {
+        img {
+            width: 106px;
+        }
+    }
+
+    .header_nav_list {
+        gap: 28px;
+    }
+
+    .header_nav_btn {
+        height: 70px;
+        font-size: 24px;
+        line-height: 36px;
+    }
+}

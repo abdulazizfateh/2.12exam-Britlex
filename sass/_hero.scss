@@ -1,0 +1,157 @@
+.section_hero {}
+
+.hero_wrapper {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 80px;
+}
+
+.hero_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 424px;
+}
+
+.hero_content {}
+
+.hero_title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero_desc {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.hero_btn_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_get_start_btn {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+@media (min-width: 400px) {
+    .hero_wrapper {
+        padding-top: 0;
+        padding-bottom: 121px;
+    }
+
+    .hero_image {
+        max-width: 500px;
+    }
+
+    .hero_title {
+        margin-bottom: 25px;
+    }
+
+    .hero_desc {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 36px;
+    }
+
+    .hero_get_start_btn {
+        width: auto;
+        padding: 0 101px;
+    }
+}
+
+@media (min-width: 575px) {
+    .hero_get_start_btn {
+        min-height: 75px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero_wrapper {
+        padding-top: 45px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 61px;
+    }
+
+    .hero_image {
+        order: 2;
+        width: 50%;
+    }
+
+    .hero_content {
+        order: 1;
+        width: 50%;
+    }
+
+    .hero_title {
+        width: 70%;
+        text-align: start;
+    }
+
+    .hero_desc {
+        width: 90%;
+        text-align: start;
+        margin: 0;
+        margin-bottom: 32px;
+    }
+
+    .hero_btn_wrapper {
+        justify-content: flex-start;
+    }
+
+    .hero_get_start_btn {
+        padding: 0 67px;
+        min-height: 65px;
+    }
+}
+
+@media (min-width: 992px) {
+    .hero_wrapper {
+        gap: 40px;
+        padding-bottom: 47px;
+    }
+
+    .hero_get_start_btn {
+        padding: 0 78px;
+        min-height: 80px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero_wrapper {
+        padding-top: 60px;
+        gap: 100px;
+        padding-bottom: 104px;
+    }
+
+    .hero_image {
+        max-width: 661px;
+    }
+
+    .hero_title {
+        margin-bottom: 40px;
+    }
+
+    .hero_desc {
+        margin-bottom: 61px;
+    }
+
+    .hero_get_start_btn {
+        padding: 0 117px;
+        min-height: 118px;
+        border-radius: 15px;
+    }
+}
